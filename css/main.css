@@ -9,7 +9,6 @@
     contacts/customers div is 661px
     DID YOU KNOW? is 183px
     */
-
   }
   .site > div {
     text-align: center;
@@ -88,12 +87,85 @@
   @media screen and (min-width: 439px) {
     .site {
       display: grid;
-      grid-template-columns: auto;
-
-      grid-template-rows: 100px 100px 100px 100px 100px; /* CHANGE LATER */
-      grid-gap: 0.5em; /* CHANGE LATER */
-      background: black; /* CHANGE LATER */
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: 23px 58.5px 52px 33px 446px 112px 55.5px;
+    }
+    .site > div {
+      text-align: center;
+    }
+    .header {
+      grid-column: 1/13;
+      background: #2190e8;
+    }
+    .header > p {
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      font-size: 6.7px;
+      letter-spacing: 0.4px;
+      line-height: 11.3px;
+      padding-top: 1px;
+    }
+    .navbar {
+      grid-column: 1/13;
+      background: #1a4c74;
+    }
+    .icons {
+      margin-top: 12px;
+      margin-left: 27%;
+      margin-right: 29%;
+      display: flex;
+      justify-content: space-between; /* Space between images is variable */
+      flex-wrap: nowrap;
+    }
+    .dashboard, .customers, .messages,
+    .promotions, .page-creator, .analytics {
+      transform: scale(0.6);
+      margin: -5px;
+    }
+    .search {
+      grid-column: 1/13;
+      background: #33cc66;
+      margin-top: 7px;
+      margin-left: 60px;
+      margin-right: 60px;
+      margin-bottom: 6px;
+    }
+    .search > p {
+      color: white;
+      font-family: Verdana, Geneva, sans-serif;
+      font-weight: 100;
+      font-size: 16px;
+      text-align: left;
+      margin-left: 12px;
+      line-height: 8px;
+    }
+    .footer {
+      grid-column: 1/13;
+      background: #f5f5f5;
+      margin-top: 23px;
+    }
+    .top, .sidebar, .bottom {
+      margin-left: 60px;
+    }
+    .top, .mainbar, .bottom {
+      margin-right: 60px;
+    }
+    .top {
+      grid-column: 1/13;
+      background: #ffd1dc;
+    }
+    .sidebar {
+      grid-column: 1/4;
+      background: #feffd1;
+    }
+    .mainbar {
+      grid-column: 4/13;
+      background: #daffd1;
+    }
+    .bottom {
+      grid-column: 1/13;
+      background: #d1fdff;
     }
   }
-
 }
