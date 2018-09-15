@@ -22,6 +22,7 @@
 .hd-spacer { background-position: -1199px -258px; width: 1px; height: 30px; }
 
 /* navbar */
+.nv-bg { background-position: -1px -46px; width: 1200px; height: 112px; }
 .nv-customers { background-position: -1134px -386px; width: 62px; height: 42px; }
 .nv-customers:hover { background-position: -992px -554px; width: 62px; height: 42px; }
 .nv-shadow { background-position: -1134px -429px; width: 60px; height: 5px; }
@@ -35,7 +36,6 @@
 .nv-page-creator:hover { background-position: -753px -646px; width: 45px; height: 50px; }
 .nv-analytics { background-position: -799px -646px; width: 42px; height: 50px; }
 .nv-analytics:hover { background-position: -842px -646px; width: 42px; height: 50px; }
-.nv-bg { background-position: -1px -46px; width: 1200px; height: 112px; }
 
 /* searchbar */
 .sch { background-position: -1165px -220px; width: 23px; height: 22px; }
