@@ -1,5 +1,7 @@
 @supports (grid-area:auto) {
 
+  * { margin: 0; padding: 0; } /* for full bleed */
+
   .site {
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -88,7 +90,7 @@
     .site {
       display: grid;
       grid-template-columns: auto auto auto auto;
-      grid-template-rows: 23px 58.5px 52px 33px 446px 112px 55.5px;
+      grid-template-rows: 23px 58px 52px 36px 445px 115px 55.5px;
     }
     .site > div {
       text-align: center;
@@ -97,13 +99,14 @@
       grid-column: 1/13;
       background: #2190e8;
     }
-    .header > p {
+    .header > a {
+      text-decoration: none;
       color: white;
       font-family: 'Roboto', sans-serif;
       font-weight: bold;
       font-size: 6.7px;
       letter-spacing: 0.4px;
-      line-height: 11.3px;
+      line-height: 24px;
       padding-top: 1px;
     }
     .navbar {
@@ -153,7 +156,43 @@
     }
     .top {
       grid-column: 1/13;
+      margin-top: 9px;
+      padding-bottom: 9px;
       background: #ffd1dc;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+    .top > span {
+      font-family: Verdana, Geneva, sans-serif;
+      font-size: 6.5px;
+      margin-top: 9px;
+    }
+    #topleft {
+      color: #fe7f13;
+      margin-left: 16px;
+      text-align: left;
+      text-transform: uppercase;
+    }
+    #topmiddle {
+      color: #777777;
+    }
+    .toparrows {
+      transform: scale(0.7);
+      display: inline-block;
+      text-decoration: none;
+      font-family: "Arial Black", Gadget, sans-serif;
+      font-size: 9px;
+      font-weight: 900;
+      padding: 0.5px 4px;
+      margin: -1.5px;
+      background-color: #ffffff;
+      color: #fe7f13;
+    	border: 1px solid #cdcdcd;
+      border-radius: 50%;
+    }
+    .toparrows:hover {
+      transform: scale(0.8);
     }
     .sidebar {
       grid-column: 1/4;
