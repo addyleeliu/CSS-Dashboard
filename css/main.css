@@ -1,6 +1,9 @@
 @supports (grid-area:auto) {
 
-  * { margin: 0; padding: 0; } /* for full bleed */
+  * { /* for full bleed */
+    margin: 0;
+    padding: 0;
+    }
 
   .site {
     display: grid;
@@ -11,21 +14,27 @@
     contacts/customers div is 661px
     DID YOU KNOW? is 183px
     */
-  }
-  .site > div {
-    text-align: center;
+    grid-template-areas:
+      'hd hd hd hd' /* header */
+      'nv nv nv nv' /* navbar */
+      'sch sch sch sch' /* searchbar */
+      'top top top top' /* top of main area */
+      'side side side side' /* main area */
+      'bt bt bt bt' /* bottom of main area */
+      'ft ft ft ft'; /* footer */
   }
   .header {
     grid-column: 1/13;
     background: #2190e8;
   }
-  .header > p {
+  .header > a {
+    text-decoration: none;
     color: white;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 10px;
     letter-spacing: 0.4px;
-    line-height: 18px;
+    line-height: 35px;
     padding-top: 1px;
   }
   .navbar {
@@ -40,8 +49,8 @@
     justify-content: space-between; /* Space between images is variable */
     flex-wrap: nowrap;
   }
-  .dashboard, .customers, .messages,
-  .promotions, .page-creator, .analytics {
+  .nv-dashboard, .nv-customers, .nv-messages,
+  .nv-promotions, .nv-page-creator, .nv-analytics {
     transform: scale(1.15);
     margin: 2px;
   }
@@ -67,6 +76,37 @@
     grid-column: 1/13;
     background: #ffd1dc;
   }
+  .top > span {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 6.5px;
+    margin-top: 9px;
+  }
+  #topleft {
+    color: #fe7f13;
+    margin-left: 16px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  #topmiddle {
+    color: #777777;
+  }
+  .toparrows {
+    transform: scale(0.7);
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 9px;
+    font-weight: 900;
+    padding: 0.5px 4px;
+    margin: -1.5px;
+    background-color: #ffffff;
+    color: #fe7f13;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+  }
+  .toparrows:hover {
+    transform: scale(0.8);
+  }
   .sidebar {
     grid-column: 1/13;
     background: #feffd1;
@@ -86,14 +126,27 @@
     margin-bottom: 2px;
   }
 
-  @media screen and (min-width: 439px) {
+  .flexrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: 569px) { /* START OF DESKTOP STYLING */
     .site {
       display: grid;
       grid-template-columns: auto auto auto auto;
       grid-template-rows: 23px 58px 52px 36px 445px 115px 55.5px;
-    }
-    .site > div {
-      text-align: center;
+      grid-template-areas:
+        'hd hd hd hd hd hd hd hd hd hd hd hd' /* header */
+        'nv nv nv nv nv nv nv nv nv nv nv nv' /* navbar */
+        '. sch sch sch sch sch sch sch sch sch sch .' /* searchbar */
+        '. top top top top top top top top top top .' /* top of main area */
+        '. side side side side bar bar bar bar bar bar .' /* main area */
+        '. bt bt bt bt bt bt bt bt bt bt .' /* bottom of main area */
+        'ft ft ft ft ft ft ft ft ft ft ft ft'; /* footer */
     }
     .header {
       grid-column: 1/13;
@@ -121,8 +174,8 @@
       justify-content: space-between; /* Space between images is variable */
       flex-wrap: nowrap;
     }
-    .dashboard, .customers, .messages,
-    .promotions, .page-creator, .analytics {
+    .nv-dashboard, .nv-customers, .nv-messages,
+    .nv-promotions, .nv-page-creator, .nv-analytics {
       transform: scale(0.6);
       margin: -5px;
     }
@@ -143,11 +196,6 @@
       margin-left: 12px;
       line-height: 8px;
     }
-    .footer {
-      grid-column: 1/13;
-      background: #f5f5f5;
-      margin-top: 23px;
-    }
     .top, .sidebar, .bottom {
       margin-left: 60px;
     }
@@ -163,37 +211,6 @@
       justify-content: space-between;
       flex-wrap: nowrap;
     }
-    .top > span {
-      font-family: Verdana, Geneva, sans-serif;
-      font-size: 6.5px;
-      margin-top: 9px;
-    }
-    #topleft {
-      color: #fe7f13;
-      margin-left: 16px;
-      text-align: left;
-      text-transform: uppercase;
-    }
-    #topmiddle {
-      color: #777777;
-    }
-    .toparrows {
-      transform: scale(0.7);
-      display: inline-block;
-      text-decoration: none;
-      font-family: "Arial Black", Gadget, sans-serif;
-      font-size: 9px;
-      font-weight: 900;
-      padding: 0.5px 4px;
-      margin: -1.5px;
-      background-color: #ffffff;
-      color: #fe7f13;
-    	border: 1px solid #cdcdcd;
-      border-radius: 50%;
-    }
-    .toparrows:hover {
-      transform: scale(0.8);
-    }
     .sidebar {
       grid-column: 1/4;
       background: #feffd1;
@@ -206,5 +223,10 @@
       grid-column: 1/13;
       background: #d1fdff;
     }
-  }
+    .footer {
+      grid-column: 1/13;
+      background: #f5f5f5;
+      margin-top: 23px;
+    }
+  } /* END OF DESKTOP STYLING */
 }
