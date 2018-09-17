@@ -179,10 +179,12 @@
   }
   .tasks, .recs {
     border: 1px solid #efefef;
-    padding: 20px 20px 0px 20px;
+    padding-top: 20px;
+    padding-bottom: 0px;
   }
   #tasks-heading {
     margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   #tasks-heading > p {
     font-family: Verdana, Geneva, sans-serif;
@@ -205,6 +207,8 @@
   #tasks-heading {
     display: flex;
     justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
     color: #2498f4;
   }
   .tasks-circle {
@@ -223,6 +227,8 @@
     font-size: 20px;
   }
   #tasks-1, #tasks-2, #tasks-3, #tasks-4 {
+    padding-right: 20px;
+    padding-left: 20px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 34px;
@@ -243,6 +249,14 @@
     color: #2498f4;
     font-size: 17px;
     margin-left: 7px;
+  }
+  #tasks-1, #tasks-2, #tasks-3, #tasks-4 {
+    margin-bottom: 9px;
+    margin-top: 23px;
+    padding-bottom: 15px;
+  }
+  #tasks-1, #tasks-2, #tasks-3 {  /* create spacer lines */
+    border-bottom: 1px solid #e8e8e8;
   }
 
   .mainbar {
@@ -416,6 +430,57 @@
     .sidebar {
       grid-area: side;
       margin-right: 0px;
+    }
+    #tasks-heading {
+      margin-bottom: 0px;
+      margin-top: -11px;
+    }
+    #tasks-heading > p {
+      font-size: 13px;
+      transform: scale(1, 1.2);
+      -webkit-transform: scale(1, 1.2); /* Safari and Chrome */
+      -moz-transform: scale(1, 1.2); /* Firefox */
+      -ms-transform: scale(1, 1.2); /* IE 9+ */
+      -o-transform: scale(1, 1.2); /* Opera */
+    }
+    .side-settings {
+      transform: scale(0.6);
+      margin-top: -2px;
+    }
+    .tasks-circle {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      font-size: 9px;
+      color: #fff;
+      text-align: center;
+      background: #32cc66;
+      padding: 2px 4.4px;
+      margin-right: 6px;
+    }
+    .tasks-txt {
+      font-size: 10.5px;
+    }
+    .tasks-ppl {
+      width: 25px;
+      height: 10px;
+      border-radius: 2px;
+      padding: 3px;
+    }
+    .tasks-ppl > span {
+      font-size: 9px;
+      margin-left: -1.5px;
+      margin-right: 1px;
+    }
+    .side-person {
+      transform: scale(0.5);
+      margin-left: -5px;
+      margin-top: -5px;
+    }
+    #tasks-1, #tasks-2, #tasks-3, #tasks-4 {
+      margin-bottom: 0px;
+      margin-top: 4px;
+      padding-bottom: 8px;
     }
 
     .mainbar {
