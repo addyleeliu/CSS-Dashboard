@@ -8,7 +8,7 @@
   .site {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: 36px 122px 80px 2492px 64px;
+    grid-template-rows: 36px 122px 80px 2495px 64px;
     /*
     (subtract from 1151px)
     contacts/customers div is 661px
@@ -108,56 +108,65 @@
     grid-area: mn;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 155px 343px 1334px 660px;
+    grid-template-rows: 158px 343px 1334px 660px;
     grid-template-areas:
       'top top top top' /* top of main area */
       'side side side side' /* main area */
       'bar bar bar bar' /* main area */
       'bt bt bt bt'; /* bottom of main area */
   }
+  .top, .bottom, .sidebar, .mainbar {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
   .top {
     grid-area: top;
     margin-top: 16px;
-    background: #ffd1dc;
+    border: 1px solid #efefef;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
-  .top > span {
+  .top > div {
     font-family: Verdana, Geneva, sans-serif;
-    font-size: 6.5px;
-    margin-top: 9px;
+  }
+  .toparrows {
+    display: inline-block;
+    transform: scale(1.1);
+    margin: 2px;
+  }
+  .toparrows:hover {
+    transform: scale(1.2);
   }
   #topleft {
     color: #fe7f13;
-    margin-left: 16px;
-    text-align: left;
+    font-size: 13px;
     text-transform: uppercase;
+    margin-left: 12px;
+    margin-top: 15px;
   }
   #topmiddle {
     color: #777777;
+    font-size: 11px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 12px;
+    line-height: 23px;
+    margin-right: 12px;
   }
-  .toparrows {
-    transform: scale(0.7);
-    display: inline-block;
-    text-decoration: none;
-    font-family: "Arial Black", Gadget, sans-serif;
-    font-size: 9px;
-    font-weight: 900;
-    padding: 0.5px 4px;
-    margin: -1.5px;
-    background-color: #ffffff;
-    color: #fe7f13;
-    border: 1px solid #cdcdcd;
-    border-radius: 50%;
-  }
-  .toparrows:hover {
-    transform: scale(0.8);
+  #topright {
+    padding-bottom: 9px;
+    text-align: center;
+    padding-top: 0px;
   }
   .sidebar {
     grid-area: side;
-    background: #feffd1;
+    border: 1px solid #efefef;
   }
   .mainbar {
     grid-column: bar;
-    background: #daffd1;
+    border: 1px solid #efefef;
   }
   .bottom {
     padding-top: 17px;
@@ -268,30 +277,54 @@
       grid-template-rows: 36px 445px 115px;
       grid-template-areas:
       'top top top top top top top top top top' /* top of main area */
-      'side side side side bar bar bar bar bar bar' /* main area */
+      'side side side bar bar bar bar bar bar bar' /* main area */
       'bt bt bt bt bt bt bt bt bt bt'; /* bottom of main area */
-    }
-    .top, .sidebar, .bottom {
-      margin-left: 10px;
-    }
-    .top, .mainbar, .bottom {
-      margin-right: 10px;
     }
     .top {
       grid-area: top;
       margin-top: 9px;
-      padding-bottom: 9px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+    .top > div {
+      font-family: Verdana, Geneva, sans-serif;
+    }
+    .sidebar {
+      margin-right: 0px;
+    }
+    .mainbar {
+      margin-left: 0px;
+    }
+    #topleft {
+      font-size: 6.5px;
+      margin-left: 12px;
+      margin-top: 0px;
+    }
+    #topmiddle {
+      font-size: 6.5px;
+      margin-top: 2px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+    }
+    #topright {
+      padding-right: 7px;
+      padding-top: 3px;
+      padding-bottom: 0px;
+    }
+    .toparrows {
+      transform: scale(0.6);
+      padding-top: 9px;
+      margin: -5px;
+    }
+    .toparrows:hover {
+      transform: scale(0.65);
     }
     .sidebar {
       grid-area: side;
-      background: #feffd1;
     }
     .mainbar {
       grid-area: bar;
-      background: #daffd1;
     }
     .bottom {
       padding-top: 0px;
