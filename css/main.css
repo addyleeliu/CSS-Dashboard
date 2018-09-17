@@ -8,9 +8,8 @@
   .site {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: 36px 122px 80px 2495px 64px;
+    grid-template-rows: 36px 122px 80px 2851px 64px;
     /*
-    (subtract from 1151px)
     contacts/customers div is 661px
     DID YOU KNOW? is 183px
     */
@@ -21,6 +20,8 @@
       'mn mn mn mn' /* main area */
       'ft ft ft ft'; /* footer */
   }
+
+  /* START OF HEADER STYLING */
   .header {
     grid-area: hd;
     background-color: #2190e8; /* For browsers that do not support gradients */
@@ -46,6 +47,9 @@
     margin: 5px;
     transform: scale(0.75);
   }
+  /* END OF HEADER STYLING */
+
+  /* START OF NAVBAR STYLING */
   .navbar {
     grid-area: nv;
     background: #1a4c74;
@@ -63,6 +67,9 @@
     transform: scale(1.15);
     margin: 2px;
   }
+  /* END OF NAVBAR STYLING */
+
+  /* START OF SEARCHBAR STYLING */
   .search {
     grid-area: sch;
     background: #33cc66;
@@ -104,13 +111,17 @@
     top: -27px;
     right: -22px;
   }
+  /* END OF SEARCHBAR STYLING */
+
+  /* START OF MAIN AREA STYLING */
   .main {
     grid-area: mn;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 158px 343px 1334px 660px;
+    grid-template-rows: 158px 340px 359px 1334px 660px;
     grid-template-areas:
       'top top top top' /* top of main area */
+      'side side side side' /* main area */
       'side side side side' /* main area */
       'bar bar bar bar' /* main area */
       'bt bt bt bt'; /* bottom of main area */
@@ -119,6 +130,7 @@
     margin-left: 10px;
     margin-right: 10px;
   }
+
   .top {
     grid-area: top;
     margin-top: 16px;
@@ -160,14 +172,17 @@
     text-align: center;
     padding-top: 0px;
   }
+
   .sidebar {
     grid-area: side;
     border: 1px solid #efefef;
   }
+
   .mainbar {
-    grid-column: bar;
+    grid-area: bar;
     border: 1px solid #efefef;
   }
+
   .bottom {
     padding-top: 17px;
     grid-area: bt;
@@ -180,12 +195,16 @@
     transform: scale(1.1);
     margin: 20px;
   }
+  /* END OF MAIN AREA STYLING */
+
+  /* START OF FOOTER STYLING */
   .footer {
     grid-area: ft;
     background: #f5f5f5;
     margin-top: 17px;
     margin-bottom: 2px;
   }
+  /* END OF FOOTER STYLING */
 
   @media screen and (min-width: 628px) { /* START OF DESKTOP-SPECIFIC STYLING */
     .site {
@@ -199,6 +218,8 @@
         '. mn mn mn mn mn mn mn mn mn mn .' /* main area */
         'ft ft ft ft ft ft ft ft ft ft ft ft'; /* footer */
     }
+
+    /* START OF HEADER STYLING */
     .header {
       grid-area: hd;
       padding-right: 6.5%;
@@ -216,6 +237,9 @@
       margin: 2px;
       transform: scale(0.55);
     }
+    /* END OF HEADER STYLING */
+
+    /* START OF NAVBAR STYLING */
     .navbar {
       grid-area: nv;
       background: #1a4c74;
@@ -233,6 +257,9 @@
       transform: scale(0.6);
       margin: -5px;
     }
+    /* END OF NAVBAR STYLING */
+
+    /* START OF SEARCHBAR STYLING */
     .search {
       grid-area: sch;
       background: #33cc66;
@@ -268,6 +295,9 @@
       top: -22px;
       right: -40px;
     }
+    /* END OF SEARCHBAR STYLING */
+
+    /* START OF MAIN AREA STYLING */
     .main {
       margin-left: 50px;
       margin-right: 50px;
@@ -280,6 +310,7 @@
       'side side side bar bar bar bar bar bar bar' /* main area */
       'bt bt bt bt bt bt bt bt bt bt'; /* bottom of main area */
     }
+
     .top {
       grid-area: top;
       margin-top: 9px;
@@ -290,11 +321,13 @@
     .top > div {
       font-family: Verdana, Geneva, sans-serif;
     }
-    .sidebar {
-      margin-right: 0px;
+    .toparrows {
+      transform: scale(0.6);
+      padding-top: 9px;
+      margin: -5px;
     }
-    .mainbar {
-      margin-left: 0px;
+    .toparrows:hover {
+      transform: scale(0.65);
     }
     #topleft {
       font-size: 6.5px;
@@ -312,20 +345,17 @@
       padding-top: 3px;
       padding-bottom: 0px;
     }
-    .toparrows {
-      transform: scale(0.6);
-      padding-top: 9px;
-      margin: -5px;
-    }
-    .toparrows:hover {
-      transform: scale(0.65);
-    }
+
     .sidebar {
       grid-area: side;
+      margin-right: 0px;
     }
+
     .mainbar {
+      margin-left: 0px;
       grid-area: bar;
     }
+
     .bottom {
       padding-top: 0px;
       grid-area: bt;
@@ -339,10 +369,15 @@
     #ad2 {
       margin-top: -54.5px;
     }
+    /* END OF MAIN AREA STYLING */
+
+    /* START OF FOOTER STYLING */
     .footer {
       grid-area: ft;
       background: #f5f5f5;
       margin-top: 23px;
     }
+    /* END OF FOOTER STYLING */
+
   } /* END OF DESKTOP-SPECIFIC STYLING */
 }
