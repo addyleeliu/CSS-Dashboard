@@ -8,7 +8,7 @@
   .site {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-template-rows: 36px 122px 80px 2851px 64px;
+    grid-template-rows: 36px 122px 80px 2862px 64px;
     /*
     contacts/customers div is 661px
     DID YOU KNOW? is 183px
@@ -118,11 +118,11 @@
     grid-area: mn;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 158px 340px 359px 1334px 660px;
+    grid-template-rows: 158px 340px 370px 1334px 660px;
     grid-template-areas:
       'top top top top' /* top of main area */
-      'side side side side' /* main area */
-      'side side side side' /* main area */
+      'side side side side' /* main area - tasks */
+      'side side side side' /* main area - recs */
       'bar bar bar bar' /* main area */
       'bt bt bt bt'; /* bottom of main area */
   }
@@ -178,7 +178,6 @@
     border: 1px solid #efefef;
   }
   .tasks, .recs {
-    border: 1px solid #efefef;
     padding-top: 20px;
     padding-bottom: 0px;
   }
@@ -186,8 +185,9 @@
     margin-bottom: 20px;
     margin-bottom: 30px;
   }
-  #tasks-heading > p {
+  #tasks-heading > p, #recs-heading {
     font-family: Verdana, Geneva, sans-serif;
+    color: #2498f4;
     font-size: 24px;
     transform: scale(1, 1.2);
     -webkit-transform: scale(1, 1.2); /* Safari and Chrome */
@@ -209,7 +209,6 @@
     justify-content: space-between;
     padding-right: 20px;
     padding-left: 20px;
-    color: #2498f4;
   }
   .tasks-circle {
     width: 17px;
@@ -254,9 +253,63 @@
     margin-bottom: 9px;
     margin-top: 23px;
     padding-bottom: 15px;
+    border-bottom: 1px solid #e8e8e8; /* create spacer lines */
   }
-  #tasks-1, #tasks-2, #tasks-3 {  /* create spacer lines */
-    border-bottom: 1px solid #e8e8e8;
+
+  #recs-heading {
+    padding-left: 20px;
+    margin-top: 0px;
+    margin-bottom: -3px;
+  }
+  .recommendation {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 23.5px;
+    padding-bottom: 23.5px;
+  }
+  .recs-text {
+    display: inline-block;
+  }
+  .side-article, .side-checklist, .side-lightbulb {
+    transform: scale(1.1);
+    margin-left: 4px;
+  }
+  .recs-small, .recs-big {
+    font-family: 'Proxima Nova', sans-serif;
+    color: #777777;
+  }
+  .recs-small {
+    font-size: 10px;
+  }
+  .recs-big {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  #rec-icon-4 {
+    margin-left: 6px;
+  }
+  #rec-1, #rec-2 {
+    margin-left: 16px;
+  }
+  #rec-3 {
+    margin-left: 13px;
+  }
+  #rec-4 {
+    margin-left: 19px;
+  }
+  .recommendation {  /* create spacer lines */
+    border-bottom: 1px dotted #e8e8e8;
+  }
+  .recs > a {
+    text-decoration: none;
+  }
+  #rec-hover-1:hover #rec-icon-1, #rec-hover-2:hover #rec-icon-2,
+  #rec-hover-3:hover #rec-icon-3, #rec-hover-4:hover #rec-icon-4 {
+    filter: grayscale(100%);
+  }
+  #rec-hover-1:hover #rec-1 > p, #rec-hover-2:hover #rec-2 > p,
+  #rec-hover-3:hover #rec-3 > p, #rec-hover-4:hover #rec-4 > p {
+    color: black;
   }
 
   .mainbar {
@@ -434,14 +487,11 @@
     #tasks-heading {
       margin-bottom: 0px;
       margin-top: -11px;
+      padding-right: 5px;
+      padding-left: 5px;
     }
-    #tasks-heading > p {
+    #tasks-heading > p, #recs-heading {
       font-size: 13px;
-      transform: scale(1, 1.2);
-      -webkit-transform: scale(1, 1.2); /* Safari and Chrome */
-      -moz-transform: scale(1, 1.2); /* Firefox */
-      -ms-transform: scale(1, 1.2); /* IE 9+ */
-      -o-transform: scale(1, 1.2); /* Opera */
     }
     .side-settings {
       transform: scale(0.6);
@@ -481,6 +531,45 @@
       margin-bottom: 0px;
       margin-top: 4px;
       padding-bottom: 8px;
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+
+    .side-article, .side-checklist, .side-lightbulb {
+      transform: scale(0.53);
+      margin-left: -2px;
+    }
+    #recs-heading {
+      padding-left: 5px;
+      margin-top: -10px;
+      margin-bottom: 7px;
+    }
+    .recommendation {
+      padding-right: 5px;
+      padding-left: 5px;
+      margin-top: 2.5px;
+      padding-bottom: 3.5px;
+      display: flex;
+      align-items: center;
+    }
+    .recs-small {
+      font-size: 5px;
+    }
+    .recs-big {
+      font-size: 9px;
+      line-height: 12px;
+    }
+    #rec-icon-4 {
+      margin-left: 1px;
+    }
+    #rec-1, #rec-2 {
+      margin-left: 4px;
+    }
+    #rec-3 {
+      margin-left: 1px;
+    }
+    #rec-4 {
+      margin-left: 6px;
     }
 
     .mainbar {
