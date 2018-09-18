@@ -757,6 +757,7 @@
     #analytics-heading {
       margin: 14px 20px -17px 20px; /* top right bottom left */
     }
+    /* START OF CHARTS STYLING  */
     /* START OF BARCHART STYLING */
     .barchart {
       margin: 30px;
@@ -840,12 +841,80 @@
       display: flex;
       justify-content: space-evenly;
     }
-    .mb-tiles {
-      background: #fcf7b5;
-    }
     .mb-banner {
       background: #ffdddd;
     }
+    /* END OF CHARTS STYLING  */
+
+    /* START OF TILES STYLING  */
+    .mb-tiles {
+      display: flex;
+      justify-content: space-evenly;
+      text-align: center;
+      border: 1px solid #efefef;
+    }
+    .mb-tiles > a {
+      text-decoration: none;
+    }
+    .tile-container {
+      box-shadow: 0px 1px 2px #aaa;
+      margin: 20px -35px 15px -35px;
+      border-radius: 3px;
+      width: 100px;
+    }
+    .tile-container:hover {
+      filter: grayscale(100%);
+    }
+    .side-avatar-orange, .side-avatar-green, .side-chart-green, .side-chart-orange {
+      position: relative;
+      z-index: 0;
+    }
+    .side-avatar-orange, .side-avatar-green {
+      transform: scale(0.5);
+      margin-bottom: -14px;
+      margin-top: -33px;
+    }
+    .side-chart-green, .side-chart-orange {
+      transform: scale(0.48);
+      margin-left: -46px;
+      margin-top: -16px;
+      margin-bottom: -20px;
+    }
+    .tile-txt {
+      font-family: 'Proxima Nova', sans-serif;
+      text-transform: uppercase;
+      font-weight: 100;
+      font-size: 10px;
+      color: #fff;
+      padding: 3px 0px 3px 0px;
+      background: #2394ee;
+      margin-top: -20px;
+      position: relative;
+      z-index: 1;
+    }
+    .tile-txt-small {
+      font-size: 6px;
+    }
+    /* adding side ribbons */
+    .tile-txt:before {
+      content: url(../img/side-ribbon-left.png);
+      transform: scale(0.5);
+      position: absolute;
+      top: -8px;
+      left: -10px;
+    }
+    .tile-txt:after {
+      content: url(../img/side-ribbon-right.png);
+      transform: scale(0.5);
+      position: absolute;
+      top: -8px;
+      right: -10px;
+    }
+    /* END OF TILES STYLING  */
+
+    /* START OF BANNER STYLING  */
+    /* END OF BANNER STYLING  */
+
     /* END OF MAINBAR STYLING */
 
     .bottom {
