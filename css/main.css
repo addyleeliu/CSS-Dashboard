@@ -137,7 +137,9 @@
   .top {
     grid-area: top;
     margin-top: 16px;
-    border: 1px solid #efefef;
+    border-top: 1px solid #efefef;
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -180,7 +182,10 @@
   /* START OF SIDEBAR STYLING (TASKS AND RECS) */
   .sidebar {
     grid-area: side;
-    border: 1px solid #efefef;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
   }
   .tasks, .recs {
     padding-top: 20px;
@@ -416,6 +421,8 @@
   .socialmedia {
     display: flex;
     justify-content: center;
+    margin-top: -15px;
+    margin-bottom: 30px;
   }
   #fb, #twitter, #foursq, #googleplus {
     border: 1px solid;
@@ -479,6 +486,76 @@
     background-color: #31cc66;
   }
   /* END OF SOCIAL MEDIA STYLING */
+
+  /* START OF TILES STYLING  */
+  .mb-tiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+  }
+  .mb-tiles > a {
+    text-decoration: none;
+  }
+  .tile-container {
+    box-shadow: 0px 1px 2px #aaa;
+    margin: 125px -35px 95px -35px;
+    border-radius: 3px;
+    width: 100px;
+    transform: scale(2.5);
+  }
+  .tile-container:hover {
+    filter: grayscale(100%);
+  }
+
+  .side-avatar-orange, .side-avatar-green, .side-chart-green, .side-chart-orange {
+    position: relative;
+    z-index: 0;
+  }
+  .side-avatar-orange, .side-avatar-green {
+    transform: scale(0.5);
+    margin-bottom: -14px;
+    margin-top: -33px;
+  }
+  .side-chart-green, .side-chart-orange {
+    transform: scale(0.48);
+    margin-left: -46px;
+    margin-top: -16px;
+    margin-bottom: -20px;
+  }
+  .tile-txt {
+    font-family: 'Proxima Nova', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 10px;
+    color: #fff;
+    padding: 3px 0px 3px 0px;
+    background: #2394ee;
+    margin-top: -20px;
+    position: relative;
+    z-index: 1;
+  }
+  .tile-txt-small {
+    font-size: 6px;
+  }
+  /* adding side ribbons */
+  .tile-txt:before {
+    content: url(../img/side-ribbon-left.png);
+    transform: scale(0.5);
+    position: absolute;
+    top: -8px;
+    left: -10px;
+  }
+  .tile-txt:after {
+    content: url(../img/side-ribbon-right.png);
+    transform: scale(0.5);
+    position: absolute;
+    top: -8px;
+    right: -10px;
+  }
+  /* END OF TILES STYLING  */
 
   /* END OF MAINBAR STYLING */
 
@@ -660,6 +737,10 @@
     .sidebar {
       grid-area: side;
       margin-right: 0px;
+      border-top: 1px solid #efefef;
+      border-bottom: 1px solid #efefef;
+      border-left: 1px solid #efefef;
+      border-right: none;
     }
     #tasks-heading {
       margin-bottom: 0px;
@@ -848,67 +929,15 @@
 
     /* START OF TILES STYLING  */
     .mb-tiles {
-      display: flex;
       justify-content: space-evenly;
-      text-align: center;
-      border: 1px solid #efefef;
-    }
-    .mb-tiles > a {
-      text-decoration: none;
+      flex-direction: row;
     }
     .tile-container {
       box-shadow: 0px 1px 2px #aaa;
       margin: 20px -35px 15px -35px;
       border-radius: 3px;
       width: 100px;
-    }
-    .tile-container:hover {
-      filter: grayscale(100%);
-    }
-    .side-avatar-orange, .side-avatar-green, .side-chart-green, .side-chart-orange {
-      position: relative;
-      z-index: 0;
-    }
-    .side-avatar-orange, .side-avatar-green {
-      transform: scale(0.5);
-      margin-bottom: -14px;
-      margin-top: -33px;
-    }
-    .side-chart-green, .side-chart-orange {
-      transform: scale(0.48);
-      margin-left: -46px;
-      margin-top: -16px;
-      margin-bottom: -20px;
-    }
-    .tile-txt {
-      font-family: 'Proxima Nova', sans-serif;
-      text-transform: uppercase;
-      font-weight: 100;
-      font-size: 10px;
-      color: #fff;
-      padding: 3px 0px 3px 0px;
-      background: #2394ee;
-      margin-top: -20px;
-      position: relative;
-      z-index: 1;
-    }
-    .tile-txt-small {
-      font-size: 6px;
-    }
-    /* adding side ribbons */
-    .tile-txt:before {
-      content: url(../img/side-ribbon-left.png);
-      transform: scale(0.5);
-      position: absolute;
-      top: -8px;
-      left: -10px;
-    }
-    .tile-txt:after {
-      content: url(../img/side-ribbon-right.png);
-      transform: scale(0.5);
-      position: absolute;
-      top: -8px;
-      right: -10px;
+      transform: scale(1);
     }
     /* END OF TILES STYLING  */
 
