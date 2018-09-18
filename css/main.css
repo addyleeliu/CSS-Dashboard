@@ -118,12 +118,14 @@
     grid-area: mn;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 158px 340px 370px 1334px 660px;
+    grid-template-rows: 158px 340px 370px 522px 432px 380px 660px;
     grid-template-areas:
       'top top top top' /* top of main area */
       'side side side side' /* main area - tasks */
       'side side side side' /* main area - recs */
-      'bar bar bar bar' /* main area */
+      'bar bar bar bar' /* main area - charts */
+      'bar bar bar bar' /* main area - tiles */
+      'bar bar bar bar' /* main area - banner */
       'bt bt bt bt'; /* bottom of main area */
   }
   .top, .bottom, .sidebar, .mainbar {
@@ -131,6 +133,7 @@
     margin-right: 10px;
   }
 
+  /* START OF TOP OF MAIN AREA STYLING */
   .top {
     grid-area: top;
     margin-top: 16px;
@@ -172,7 +175,9 @@
     text-align: center;
     padding-top: 0px;
   }
+  /* END OF TOP OF MAIN AREA STYLING */
 
+  /* START OF SIDEBAR STYLING (TASKS AND RECS) */
   .sidebar {
     grid-area: side;
     border: 1px solid #efefef;
@@ -311,16 +316,103 @@
   #rec-hover-3:hover #rec-3 > p, #rec-hover-4:hover #rec-4 > p {
     color: black;
   }
+  /* END OF SIDEBAR STYLING (TASKS AND RECS) */
 
+  /* START OF MAINBAR STYLING */
   .mainbar {
     grid-area: bar;
     border: 1px solid #efefef;
   }
-  .chart-title {
-    font-family: 'Proxima Nova', sans-serif;
-    text-transform: uppercase;
-    color: #999999;
+  #analytics-heading {
+    margin: 20px;
   }
+  /* START OF BARCHART STYLING */
+  #barchart-top {
+    display: flex;
+    justify-content: space-around;
+  }
+  .barchart {
+    margin: 40px;
+    text-align: center;
+  }
+  #barchart-top > p {
+    margin-left: -10px;
+  }
+  /* IE11 hide the browser's default dropdown button */
+  select::-ms-expand {
+  display: none;
+  }
+  .dropdown {
+    position: relative;
+    min-width: 205px;
+    margin-top: -12px;
+    margin-bottom: 15px;
+  }
+  /* adapted from fabriceleven.com */
+  .dropdown:after { /* creates custom dropdown arrow */
+    right: 11px;
+    top: 5.25px;
+    padding: 0px 10px 5.5px 10px;
+    position: absolute;
+    content: '>';
+    border-bottom: 1px solid #ddd;
+    margin-right: -10px;
+    font-family: 'Overlock', cursive;
+    font-weight: 600;
+    font-size: 22px;
+    color: #fe7f13;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    pointer-events: none;
+  }
+  .dropdown select {
+    margin: 5px 0px;
+    padding: 0px 24px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #333; /* dropdown selected text color */
+    background-color: #fff;
+    border: 1px solid #cecece;
+    display: block;
+    width: 100%;
+    max-width: 320px; /* sets width of entire dropdown container */
+    height: 35px;
+    float: right;
+  }
+  .side-bar-chart {
+    margin-bottom: -200px;
+  }
+  .side-pie-spacer {
+    opacity: 0; /* hide spacer in mobile */
+  }
+  .pie-unit > p {
+    margin-bottom: 10px;
+  }
+  /* END OF BARCHART STYLING */
+  .chart-title, .dropdown select {
+    font-family: 'Proxima Nova', sans-serif;
+    color: #999999;
+    font-size: 13px;
+  }
+  .chart-title {
+    text-transform: uppercase;
+  }
+  /* START OF PIECHARTS STYLING */
+  .piecharts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .pie-unit {
+    margin: -55px 40px 40px 40px;
+  }
+  /* END OF PIECHARTS STYLING */
+  /* START OF SOCIAL MEDIA STYLING */
   .socialmedia {
     display: flex;
     justify-content: center;
@@ -386,6 +478,9 @@
   #googleplus {
     background-color: #31cc66;
   }
+  /* END OF SOCIAL MEDIA STYLING */
+
+  /* END OF MAINBAR STYLING */
 
   .bottom {
     padding-top: 17px;
@@ -409,6 +504,16 @@
     margin-bottom: 2px;
   }
   /* END OF FOOTER STYLING */
+
+
+
+
+
+
+
+
+
+
 
   @media screen and (min-width: 628px) { /* START OF DESKTOP-SPECIFIC STYLING */
     .site {
@@ -508,10 +613,12 @@
       grid-area: mn;
       display: grid;
       grid-template-columns: auto auto auto auto;
-      grid-template-rows: 36px 445px 115px;
+      grid-template-rows: 36px /* top */ 200px 165px 80px /* main */ 115px /* bottom */;
       grid-template-areas:
       'top top top top top top top top top top' /* top of main area */
-      'side side side bar bar bar bar bar bar bar' /* main area */
+      'side side side bar bar bar bar bar bar bar' /* main area - charts */
+      'side side side bar bar bar bar bar bar bar' /* main area - tiles */
+      'side side side bar bar bar bar bar bar bar' /* main area - banner */
       'bt bt bt bt bt bt bt bt bt bt'; /* bottom of main area */
     }
 
@@ -642,10 +749,104 @@
       margin-left: 6px;
     }
 
+    /* START OF MAINBAR STYLING */
     .mainbar {
       margin-left: 0px;
       grid-area: bar;
     }
+    #analytics-heading {
+      margin: 14px 20px -17px 20px; /* top right bottom left */
+    }
+    /* START OF BARCHART STYLING */
+    .barchart {
+      margin: 30px;
+    }
+    #barchart-top > p {
+      margin-left: -55px;
+    }
+    #barchart-top {
+      margin-top: 60px;
+      margin-bottom: -50px;
+      margin-left: 38px;
+    }
+    #mb-activity {
+      padding-left: 120px;
+    }
+    .dropdown {
+      margin-top: -18px;
+      margin-left: 50px;
+      margin-right: 83px;
+      margin-bottom: 10px;
+      transform: scale(0.48);
+    }
+
+    .chart-title {
+      font-size: 7px;
+    }
+    .side-bar-chart {
+      transform: scale(0.6);
+      margin-left: -45px;
+      margin-bottom: 8px;
+    }
+    .barchart {
+        margin: -30px -60px -30px -74px;
+    }
+    /* END OF BARCHART STYLING */
+    .side-pie-spacer {
+      transform: scale(0.6);
+      opacity: 1;
+      margin-left: -50px;
+      margin-right: 60px;
+      margin-top: -23px;
+      margin-bottom: -50px;
+    }
+    /* START OF PIECHARTS STYLING */
+    .pie-unit > p {
+      margin-bottom: -10px;
+    }
+    #channels, #referrals {
+      text-align: center;
+    }
+    .piecharts {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .side-pie-channels, .side-pie-referrals {
+      transform: scale(0.6);
+      margin-bottom: 10px;
+    }
+    .pie-unit {
+      margin-left: -50px;
+      margin-right: 5px;
+      margin-bottom: 36px;
+    }
+    .piecharts {
+      margin-top: 85px;
+    }
+    .socialmedia {
+      transform: scale(0.6);
+      margin-top: -50px;
+      margin-bottom: 15px;
+    }
+    .social {
+      margin: 0px 20px 0px 16px; /* space out each social media item */
+    }
+    /* END OF SOCIAL MEDIA STYLING */
+    .mb-charts {
+      margin-top: -2px;
+    }
+    .charts {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .mb-tiles {
+      background: #fcf7b5;
+    }
+    .mb-banner {
+      background: #ffdddd;
+    }
+    /* END OF MAINBAR STYLING */
 
     .bottom {
       padding-top: 0px;

@@ -5,6 +5,7 @@
       <link rel="stylesheet" type="text/css" href="css/main.css">
       <link rel="stylesheet" type="text/css" href="css/sprites.css">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css?family=Overlock" rel="stylesheet">
   </head>
   <body>
 
@@ -172,36 +173,61 @@
         </div> <!-- END OF SIDEBAR -->
 
         <div class="mainbar">
-          <div id="analytics-heading">Analytics</div>
-          <p class="chart-title">Activity</p>
-          <div>
-            <p>insert date dropdown menu</p>
-            <div class="side-dropdown-arrow"></div>
+          <div class="mb-charts">
+            <div id="analytics-heading">Analytics</div>
+            <div class="charts">
+              <div class="barchart">
+                <div id="barchart-top">
+                  <p class="chart-title" id="mb-activity">Activity</p>
+                  <div class="dropdown">
+                    <label>
+                        <select>
+                            <option selected>06/28/11 - 07/21/11</option>
+                            <option>07/21/11 - 08/14/11</option>
+                            <option>08/14/11 - 09/07/11</option>
+                            <option>09/07/11 - end of time</option>
+                        </select>
+                    </label>
+                  </div>
+                </div>
+                <div class="side-bar-chart"></div>
+              </div>
+              <div class="side-pie-spacer"></div>
+              <div class="piecharts">
+                <div class="pie-unit">
+                  <p class="chart-title" id="channels">Channels</p>
+                  <div class="side-pie-channels"></div>
+                </div>
+                <div class="pie-unit">
+                  <p class="chart-title" id="referrals">Referrals</p>
+                  <div class="side-pie-referrals"></div>
+                </div>
+              </div>
+            </div>
+            <div class= "socialmedia">
+              <div class="social">
+                <input type="checkbox" id="cb-fb">
+                <label for="cb-fb" id="fb">Facebook</label>
+              </div>
+              <div class="social">
+                <input type="checkbox" id="cb-twitter">
+                <label for="cb-twitter" id="twitter">Twitter</label>
+              </div>
+              <div class="social">
+                <input type="checkbox" id="cb-foursq">
+                <label for="cb-foursq" id="foursq">Foursquare</label>
+              </div>
+              <div class="social">
+                <input type="checkbox" id="cb-googleplus">
+                <label for="cb-googleplus" id="googleplus">Google+</label>
+              </div>
+            </div>
           </div>
-          <div class="piecharts">
-            <div class="side-bar-chart"></div>
-            <p class="chart-title">Channels</p>
-            <div class="side-pie-channels"></div>
-            <p class="chart-title">Referrals</p>
+          <div class="mb-tiles">
+            Tiles
           </div>
-          <div class="side-pie-referrals"></div>
-          <div class= "socialmedia">
-            <div class="social">
-              <input type="checkbox" id="cb-fb">
-              <label for="cb-fb" id="fb">Facebook</label>
-            </div>
-            <div class="social">
-              <input type="checkbox" id="cb-twitter">
-              <label for="cb-twitter" id="twitter">Twitter</label>
-            </div>
-            <div class="social">
-              <input type="checkbox" id="cb-foursq">
-              <label for="cb-foursq" id="foursq">Foursquare</label>
-            </div>
-            <div class="social">
-              <input type="checkbox" id="cb-googleplus">
-              <label for="cb-googleplus" id="googleplus">Google+</label>
-            </div>
+          <div class="mb-banner">
+            Banner
           </div>
         </div> <!-- END OF MAINBAR -->
 
