@@ -2,13 +2,13 @@
 
 .hd-bg, .nv-bg, .ft-bg, .top-gradient-bg, .side-bar-chart,
 .bt-ad1, .bt-ad2, .bt-ad3, .side-chart-green, .side-chart-orange,
-.side-pie-channels, .side-pie-referrals, .side-avatar-green, .side-avatar-orange, .nv-customers-active,
-.nv-customers, .nv-shadow, .nv-dashboard-active, .nv-dashboard, .nv-messages-active,
-.nv-messages, .nv-promotions-active, .nv-promotions, .nv-page-creator-active, .nv-page-creator,
-.nv-analytics-active, .nv-analytics, .ft-car, .sch, .top-leftarrow,
+.side-pie-channels, .side-pie-referrals, .side-avatar-green, .side-avatar-orange, .nv-customers,
+.nv-customers, .nv-shadow, .nv-dashboard, .nv-dashboard, .nv-messages,
+.nv-messages, .nv-promotions, .nv-promotions, .nv-page-creator, .nv-page-creator,
+.nv-analytics, .nv-analytics, .ft-car, .sch, .top-leftarrow,
 .top-rightarrow, .side-checklist, .side-social-check, .hd-help, .hd-settings,
-.side-person, .side-settings, .side-article, .ft-social-4sq-active, .ft-social-4sq,
-.ft-social-fb-active, .ft-social-fb, .ft-social-twitter-active, .ft-social-twitter, .ft-social-youtube-active,
+.side-person, .side-settings, .side-article, .ft-social-4sq, .ft-social-4sq,
+.ft-social-fb, .ft-social-fb, .ft-social-twitter, .ft-social-twitter, .ft-social-youtube,
 .ft-social-youtube, .side-ribbon-left, .side-ribbon-right, .side-lightbulb, .ft-up-arrow,
 .side-arrow-left, .side-arrow-right, .side-dropdown-arrow, .side-pie-spacer, .hd-spacer,
 .ft-spacer-big, .ft-spacer-small {
@@ -74,14 +74,14 @@
 /* footer */
 .ft-bg { background-position: -1px -159px; width: 1200px; height: 60px; }
 .ft-car { background-position: -1159px -613px; width: 40px; height: 40px; }
-.ft-social-4sq-active { background-position: -1150px -522px; width: 16px; height: 16px; }
-.ft-social-4sq { background-position: -1167px -522px; width: 16px; height: 16px; }
-.ft-social-fb-active { background-position: -1184px -522px; width: 16px; height: 16px; }
-.ft-social-fb { background-position: -1173px -554px; width: 16px; height: 16px; }
-.ft-social-twitter-active { background-position: -1173px -571px; width: 16px; height: 16px; }
-.ft-social-twitter { background-position: -1173px -588px; width: 16px; height: 16px; }
-.ft-social-youtube-active { background-position: -885px -646px; width: 16px; height: 16px; }
-.ft-social-youtube { background-position: -902px -646px; width: 16px; height: 16px; }
+.ft-social-4sq { background-position: -1150px -522px; width: 16px; height: 16px; }
+.ft-social-4sq:hover { background-position: -1167px -522px; width: 16px; height: 16px; }
+.ft-social-fb { background-position: -1184px -522px; width: 16px; height: 16px; }
+.ft-social-fb:hover { background-position: -1173px -554px; width: 16px; height: 16px; }
+.ft-social-twitter { background-position: -1173px -571px; width: 16px; height: 16px; }
+.ft-social-twitter:hover { background-position: -1173px -588px; width: 16px; height: 16px; }
+.ft-social-youtube { background-position: -885px -646px; width: 16px; height: 16px; }
+.ft-social-youtube:hover { background-position: -902px -646px; width: 16px; height: 16px; }
 .ft-up-arrow { background-position: -1186px -356px; width: 14px; height: 9px; }
 .ft-spacer-big { background-position: -1188px -265px; width: 1px; height: 51px; }
 .ft-spacer-small { background-position: -1190px -265px; width: 1px; height: 20px; }
